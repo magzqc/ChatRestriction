@@ -29,7 +29,7 @@ public final class ChatRestriction extends JavaPlugin {
     public void onDisable() {
     }
 
-    public void loadConfig(){
+    public void loadConfig() {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
@@ -37,7 +37,7 @@ public final class ChatRestriction extends JavaPlugin {
         c_config.get().options().copyDefaults(true);
         c_config.save();
 
-        message.BroadcastPerms((c_config.get().getString("plugin.prefix") + c_config.get().getString("messages.start_msg")),c_config.get().getString("plugin.permission.admin"));
+        message.BroadcastPerms((c_config.get().getString("plugin.prefix") + c_config.get().getString("messages.start_msg")), c_config.get().getString("plugin.permission.admin"));
 
 
     }
