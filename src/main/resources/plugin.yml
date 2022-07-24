@@ -1,0 +1,9 @@
+name: ChatRestriction
+version: '${project.version}'
+main: magz.dev.chatrestriction.ChatRestriction
+api-version: 1.19
+commands:
+  cr:
+
+
+
