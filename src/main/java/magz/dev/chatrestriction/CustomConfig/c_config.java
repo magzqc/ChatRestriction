@@ -30,10 +30,11 @@ public class c_config {
         c_config.get().addDefault("plugin.permission.admin", "chatrestriction.admin");
         c_config.get().addDefault("plugin.permission.bypass", "chatrestriction.bypass");
 
-        c_config.get().addDefault("messages.on_cooldown", "§cYou are on cooldown. Pigeone le shop.");
+        c_config.get().addDefault("messages.on_cooldown", "§cYou are on cooldown.");
         c_config.get().addDefault("messages.reload_msg", "§7Successfully reloaded ChatRestriction.");
         c_config.get().addDefault("messages.start_msg", "§7Successfully loaded ChatRestriction.");
         c_config.get().addDefault("messages.no_perm", "§cYou don't have the permissions to do that.");
+        c_config.get().addDefault("messages.succesfully_changed", "§7You successfully changed to:§r ");
 
     }
 
@@ -41,6 +42,10 @@ public class c_config {
         return customFile;
     }
 
+    public static void setString(String path, String object) throws IOException {
+        customFile.set(path, object);
+        customFile.save(file);
+    }
     public static void save(){
         try{
             customFile.save(file);
