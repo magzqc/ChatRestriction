@@ -13,25 +13,28 @@ public class CR implements CommandExecutor{
         if (sender instanceof Player){
             Player p = (Player) sender;
 
-            if (p.hasPermission("cr.reload")){
+            if (p.hasPermission(c_config.get().getString("plugin.permission.admin"))){
                 c_config.reload();
-                p.sendMessage(c_config.get().getString("plugin.prefix") +  c_config.get().getString("messages.reload_msg") );
+                p.sendMessage(c_config.get().getString("plugin.prefix") + c_config.get().getString("messages.reload_msg") );
 
             }else {
                 p.sendMessage(c_config.get().getString("messages.no_perm"));
             }
-
-
-
             return true;
+        }else {
+
+            // console only
+            c_config.reload();
+
         }
 
-        c_config.reload();
 
 
 
 
-        return true;
+
+
+    return true;
 
     }
 }

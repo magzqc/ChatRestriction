@@ -14,31 +14,20 @@ import magz.dev.chatrestriction.utilities.message;
 
 public final class ChatRestriction extends JavaPlugin {
 
-
-
     @Override
     public void onEnable() {
 
-
-
-
         loadConfig();
-
+        getCommand("cr").setExecutor(new CR());
         PluginManager pm = Bukkit.getPluginManager();
 
-
-        pm.registerEvents((Listener) new PlayerChatEvent(), this);
-        getCommand("cr").setExecutor(new CR());
-
-
+        pm.registerEvents(new PlayerChatEvent(), this);
 
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
-
 
     public void loadConfig(){
         getConfig().options().copyDefaults();
@@ -52,6 +41,5 @@ public final class ChatRestriction extends JavaPlugin {
 
 
     }
-
 
 }

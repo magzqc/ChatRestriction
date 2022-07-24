@@ -12,7 +12,6 @@ public class c_config {
     private static File file;
     private static FileConfiguration customFile;
 
-    //Finds or generates the custom config file
     public static void setup(){
         file = new File(Bukkit.getServer().getPluginManager().getPlugin("ChatRestriction").getDataFolder(), "c_config.yml");
 
@@ -20,7 +19,6 @@ public class c_config {
             try{
                 file.createNewFile();
             }catch (IOException e){
-                //owww
             }
         }
         customFile = YamlConfiguration.loadConfiguration(file);
@@ -37,7 +35,6 @@ public class c_config {
         c_config.get().addDefault("messages.start_msg", "§7Successfully loaded ChatRestriction.");
         c_config.get().addDefault("messages.no_perm", "§cYou don't have the permissions to do that.");
 
-
     }
 
     public static FileConfiguration get(){
@@ -48,7 +45,7 @@ public class c_config {
         try{
             customFile.save(file);
         }catch (IOException e){
-            System.out.println("Couldn't save file");
+            System.out.println("Peut pas le save");
         }
     }
 

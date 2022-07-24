@@ -19,12 +19,6 @@ public class cooldown implements Runnable{
         this.cooldown_list = list;
     }
 
-    public List<Player> getCooldown_list() {
-        return this.cooldown_list;
-    }
-
-
-
     public void run(){
         try {
             try {
@@ -34,7 +28,7 @@ public class cooldown implements Runnable{
                 throw new RuntimeException(e);
             }
         } finally {
-
+            // ?ma
         }
     }
 

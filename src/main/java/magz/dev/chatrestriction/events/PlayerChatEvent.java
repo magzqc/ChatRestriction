@@ -14,13 +14,11 @@ import java.util.UUID;
 
 public class PlayerChatEvent implements Listener {
 
-//    private HashMap<UUID, Long> cooldown = new HashMap<UUID, Long>();
     public List<Player> onCD = new ArrayList<Player>();
 
 
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
-
 
         Player p = event.getPlayer();
 

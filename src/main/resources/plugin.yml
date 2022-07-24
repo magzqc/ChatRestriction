@@ -4,6 +4,4 @@ main: magz.dev.chatrestriction.ChatRestriction
 api-version: 1.19
 commands:
   cr:
-
-
-
+    description: ChatRestriction
